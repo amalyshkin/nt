@@ -45,7 +45,13 @@ public class MainModule {
         dataSource.setPort(port);
         dataSource.setDatabaseName(dbName);
 
-		DataSourceHelper.putDataSourceInContext(DATA_SOURCE_NAME, dataSource);
+        log.trace(dataSource.getUser());
+        log.trace(dataSource.getPassword());
+        log.trace(dataSource.getServerName());
+        log.trace(dataSource.getPort());
+        log.trace(dataSource.getDatabaseName());
+
+        DataSourceHelper.putDataSourceInContext(DATA_SOURCE_NAME, dataSource);
 		
 	}
 	
@@ -102,7 +108,6 @@ public class MainModule {
             HelpFormatter formatter = new HelpFormatter();
             formatter.printHelp( "java -jar app.jar", options );
             System.exit(1);
-            return null;
         }
     }
 	
