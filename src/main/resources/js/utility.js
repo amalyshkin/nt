@@ -20,7 +20,8 @@ $(document).ready(function () {
 	
 	$('#accordion-4').easyAccordion({ 
 			autoStart: false,
-			slideInterval: 5000
+			slideInterval: 5000,
+			slideNum:false	
 	}); 
 		
 

@@ -6,19 +6,19 @@
 	
 	
 }
-function changeValue1(vale){
-	if(vale=="All Ireland")
+function changeValue1(value){
+	if(value==="All Ireland")
 	{
 		document.getElementById("hdcity").value ="";  
-		document.getElementById("area").innerHTML = vale;
+		document.getElementById("area").innerHTML = value;
 	
 		document.getElementById("county_ul").style.display='none';
 		
 	}
 	else
 	{
-		document.getElementById("hdcity").value = vale;  
-		document.getElementById("area").innerHTML = vale;
+		document.getElementById("hdcity").value = value;  
+		document.getElementById("area").innerHTML = value;
 	
 		document.getElementById("county_ul").style.display='none';
 	}

@@ -20,7 +20,7 @@ import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
 
 
 public class MainModule {
-	private static String DATA_SOURCE_NAME =  "java:/comp/env/jdbc/test-data";
+	private static final String DATA_SOURCE_NAME =  "java:/comp/env/jdbc/test-data";
 
 	public static void main(String[] args) throws Exception  {
 		CommandLine cl = parseCLArgs(args);

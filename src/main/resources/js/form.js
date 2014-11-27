@@ -96,7 +96,9 @@ Ext.QuickTips.init();
         bbar: new Ext.ux.StatusBar({
             id: 'form-statusbar',
             defaultText: 'enter email and password to login',
-            plugins: new Ext.ux.ValidationStatus({form:'status-form'})
+            plugins: [
+                new Ext.ux.ValidationStatus({form:'status-form'})
+            ]
         })
     });
 

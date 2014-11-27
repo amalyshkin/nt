@@ -131,7 +131,7 @@ F.prototype = {
     },
 
     // call Flickr and raise errors
-    _call: function( params, callback ) {
+    _call: function( params, callback, scope ) {
 
         var url = 'http://api.flickr.com/services/rest/?';
 
