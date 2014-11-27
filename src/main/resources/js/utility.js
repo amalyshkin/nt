@@ -18,10 +18,4 @@ $(document).ready(function () {
 			slideNum:false	
 	}); 
 	
-	$('#accordion-4').easyAccordion({ 
-			autoStart: false,
-			slideInterval: 5000
-	}); 
-		
-
 });

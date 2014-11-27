@@ -1,4 +1,11 @@
-  function changeValue(vale){
+$(function(){
+    $('#accordion-4').easyAccordion({ 
+			autoStart: false,
+			slideInterval: 5000
+	}); 
+})
+
+function changeValue(vale){
 	document.getElementById("category").value = vale;
 	document.getElementById("cat").innerHTML = vale;
 	
