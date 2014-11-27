@@ -1,6 +1,7 @@
 /*!
  * Galleria Flickr Plugin v 1.2
  * http://galleria.aino.se
+ * this going to be non-conflicting change
  *
  * Copyright 2010, Aino
  * Licensed under the MIT license.
