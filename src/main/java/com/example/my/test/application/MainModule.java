@@ -59,16 +59,11 @@ public class MainModule {
 	private static Options prepareOptions(){
         
 
-        Option dbHostOpt = OptionBuilder.hasArg().isRequired().
-                withDescription("Database server host").create("dbhost");
-        Option dbPortOpt = OptionBuilder.hasArg().isRequired().
-                withDescription("Database port. Must be whole number").create("dbport");
-        Option dbUsernameOpt = OptionBuilder.hasArg().isRequired().
-                withDescription("Database username").create("dbusername");
-        Option dbPaswordOpt = OptionBuilder.hasArg().isRequired().
-                withDescription("Database password").create("dbpassword");
-        Option dbNameOpt = OptionBuilder.hasArg().isRequired().
-                withDescription("Database name").create("dbname");
+        Option dbHostOpt = OptionBuilder.hasArg().isRequired().withDescription("Database server host").create("dbhost");
+        Option dbPortOpt = OptionBuilder.hasArg().isRequired().withDescription("Database port. Must be whole number").create("dbport");
+        Option dbUsernameOpt = OptionBuilder.hasArg().isRequired().withDescription("Database username").create("dbusername");
+        Option dbPaswordOpt = OptionBuilder.hasArg().isRequired().withDescription("Database password").create("dbpassword");
+        Option dbNameOpt = OptionBuilder.hasArg().isRequired().withDescription("Database name").create("dbname");
         Option configFilePath = OptionBuilder.hasArg().withDescription("Config file location").create("config");
 
 
