@@ -43,10 +43,10 @@ function mouseCounty(){
 
 
 function login_pop_up(showhide){
-	if(showhide == "show"){
+	if(showhide === "show"){
 		document.getElementById('popupbox').style.visibility="visible"; /* If the function is called with the variable 'show', show the login box */
 	}
-	if(showhide == "hide"){
+	if(showhide === "hide"){
 		document.getElementById('popupbox').style.visibility="hidden"; /* If the function is called with the variable 'show', show the login box */
 	}
 }
