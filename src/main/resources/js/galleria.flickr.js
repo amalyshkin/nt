@@ -9,10 +9,7 @@
 (function($) {
  
 // If no Galleria, fail silently
-var G = window.Galleria; 
-if (typeof G == 'undefined') {
-    return;
-}
+var G = window.Galleria || {}; 
 
 var F = G.Flickr = function(api_key) {
 
@@ -21,14 +18,16 @@ var F = G.Flickr = function(api_key) {
         return;
     }
 
-    this.callback = function(){};
+    this.callback = function(){
+        return false;
+    };
 
     // The required API key
     this.api_key = api_key;
 
     this.options = {
-        max: 40, // photos to return
-        size: 'big', // photo size ( small,medium,big,original )
+        max: 20, // photos to return
+        size: 'small', // photo size ( small,medium,big,original )
         sort: 'interestingness-desc', // sort option ( date-posted-asc, date-posted-desc, date-taken-asc, date-taken-desc, interestingness-desc, interestingness-asc, relevance )
         description: false // set this to true to get description as caption
     }
@@ -78,7 +77,7 @@ F.prototype = {
 
     // get photos from a gallery
     getGallery: function(gallery_id) {
-        this._set(arguments);
+        this._set.apply(this, arguments);
         return this._find({
             gallery_id: gallery_id,
             method: 'flickr.galleries.getPhotos'
@@ -87,7 +86,6 @@ F.prototype = {
 
     // search for groups by search string, returns an array with group objects
     // use getGroup to get the photos from a group ID
-    // added in 1.2
     searchGroup: function(str, callback) {
         callback = callback || function(){};
         this._call({
