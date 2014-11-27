@@ -19,7 +19,8 @@ ImageChooser.prototype = {
 			    url: this.config.url,
 			    root: 'images',
 			    fields: [
-			        'name', 'url',
+			        'name', 
+                                'url',
 			        {name:'size', type: 'float'},
 			        {name:'lastmod', type:'date', dateFormat:'timestamp'}
 			    ],
@@ -65,7 +66,6 @@ ImageChooser.prototype = {
 
 			var cfg = {
 		    	title: 'Choose an Image',
-		    	id: 'img-chooser-dlg',
 		    	layout: 'border',
 				minWidth: 500,
 				minHeight: 300,

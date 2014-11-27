@@ -1,7 +1,8 @@
 $(function(){
-    $('#accordion-4').easyAccordion({ 
+	$('#accordion-4').easyAccordion({ 
 			autoStart: false,
-			slideInterval: 5000
+			slideInterval: 5000,
+			slideNum:false	
 	}); 
 })
 
@@ -13,19 +14,19 @@ function changeValue(vale){
 	
 	
 }
-function changeValue1(vale){
-	if(vale=="All Ireland")
+function changeValue1(value){
+	if(value==="All Ireland")
 	{
 		document.getElementById("hdcity").value ="";  
-		document.getElementById("area").innerHTML = vale;
+		document.getElementById("area").innerHTML = value;
 	
 		document.getElementById("county_ul").style.display='none';
 		
 	}
 	else
 	{
-		document.getElementById("hdcity").value = vale;  
-		document.getElementById("area").innerHTML = vale;
+		document.getElementById("hdcity").value = value;  
+		document.getElementById("area").innerHTML = value;
 	
 		document.getElementById("county_ul").style.display='none';
 	}

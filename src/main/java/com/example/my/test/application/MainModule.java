@@ -20,7 +20,7 @@ import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
 
 
 public class MainModule {
-	private static String DATA_SOURCE_NAME =  "java:/comp/env/jdbc/test-data";
+	private static final String DATA_SOURCE_NAME =  "java:/comp/env/jdbc/test-data";
 
 	public static void main(String[] args) throws Exception  {
 		CommandLine cl = parseCLArgs(args);
@@ -59,11 +59,11 @@ public class MainModule {
 	private static Options prepareOptions(){
         
 
-        Option dbHostOpt = OptionBuilder.hasArg().isRequired().withDescription("Database server host").create("dbhost");
-        Option dbPortOpt = OptionBuilder.hasArg().isRequired().withDescription("Database port. Must be whole number").create("dbport");
-        Option dbUsernameOpt = OptionBuilder.hasArg().isRequired().withDescription("Database username").create("dbusername");
-        Option dbPaswordOpt = OptionBuilder.hasArg().isRequired().withDescription("Database password").create("dbpassword");
-        Option dbNameOpt = OptionBuilder.hasArg().isRequired().withDescription("Database name").create("dbname");
+        Option dbHostOpt = OptionBuilder.hasArg().isRequired().withDescription("Database server host").create("dbHost");
+        Option dbPortOpt = OptionBuilder.hasArg().isRequired().withDescription("Database port. Must be whole number").create("dbPort");
+        Option dbUsernameOpt = OptionBuilder.hasArg().isRequired().withDescription("Database username").create("dbUsername");
+        Option dbPaswordOpt = OptionBuilder.hasArg().isRequired().withDescription("Database password").create("dbPassword");
+        Option dbNameOpt = OptionBuilder.hasArg().isRequired().withDescription("Database name").create("dbName");
         Option configFilePath = OptionBuilder.hasArg().withDescription("Config file location").create("config");
 
 

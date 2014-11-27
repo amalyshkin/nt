@@ -1,6 +1,7 @@
 /*!
  * Galleria Flickr Plugin v 1.2
  * http://galleria.aino.se
+ * this going to be non-conflicting change
  *
  * Copyright 2010, Aino
  * Licensed under the MIT license.
@@ -129,7 +130,7 @@ F.prototype = {
     },
 
     // call Flickr and raise errors
-    _call: function( params, callback ) {
+    _call: function( params, callback, scope ) {
 
         var url = 'http://api.flickr.com/services/rest/?';
 
